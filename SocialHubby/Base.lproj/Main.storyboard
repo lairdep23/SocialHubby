@@ -67,18 +67,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7X-i7-HbL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="j8b-Nt-V5d"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-Fu-2oK">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="66" width="600" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="A7X-i7-HbL" firstAttribute="top" secondItem="gZm-GT-BjR" secondAttribute="bottom" id="8JK-R3-m8m"/>
                             <constraint firstItem="bwT-YJ-dtI" firstAttribute="top" secondItem="dsC-Fu-2oK" secondAttribute="bottom" id="BAO-zi-8fq"/>
                             <constraint firstAttribute="trailing" secondItem="dsC-Fu-2oK" secondAttribute="trailing" id="BbT-Jw-Gx2"/>
                             <constraint firstItem="dsC-Fu-2oK" firstAttribute="top" secondItem="gZm-GT-BjR" secondAttribute="bottom" id="HDF-de-cd7"/>
+                            <constraint firstItem="dsC-Fu-2oK" firstAttribute="top" secondItem="A7X-i7-HbL" secondAttribute="bottom" id="HaV-lN-2rl"/>
                             <constraint firstItem="dsC-Fu-2oK" firstAttribute="leading" secondItem="bre-PC-bEC" secondAttribute="leading" id="Rc2-pt-Myq"/>
+                            <constraint firstAttribute="trailing" secondItem="A7X-i7-HbL" secondAttribute="trailing" id="YBf-YJ-xcu"/>
+                            <constraint firstItem="A7X-i7-HbL" firstAttribute="leading" secondItem="bre-PC-bEC" secondAttribute="leading" id="sCr-DW-S38"/>
+                            <constraint firstItem="dsC-Fu-2oK" firstAttribute="top" secondItem="A7X-i7-HbL" secondAttribute="bottom" constant="8" id="xxN-fq-d7d"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HDF-de-cd7"/>
+                                <exclude reference="xxN-fq-d7d"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Accounts" id="9bz-3v-t99"/>
                     <connections>

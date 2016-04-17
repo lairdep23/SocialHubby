@@ -49,7 +49,7 @@ struct Account {
         
         let facebook = Account(name: "Facebook", url:  urlBase + "facebook.com")
         let twitter = Account(name: "Twitter", url:  urlBase + "twitter.com")
-        let google = Account(name: "Google", url: urlBase + "plus.google.com")
+        let google = Account(name: "Google+", url: urlBase + "plus.google.com")
         let instagram = Account(name: "Instagram", url: urlBase + "instagram.com")
         let youtube = Account(name: "Youtube", url: urlBase + "youtube.com")
         let pinterest = Account(name: "Pinterest", url: urlBase + "pinterest.com")
@@ -59,6 +59,7 @@ struct Account {
         let vine = Account(name: "Vine", url: urlBase + "vine.co")
         let flickr = Account(name: "Flickr", url: urlBase + "flickr.com")
         let soundCloud = Account(name: "SoundCloud", url: urlBase + "soundcloud.com")
+        let github = Account(name: "GitHub", url: urlBase + "github.com")
         let disqus = Account(name: "Disqus", url: urlBase + "disqus.com")
         let vk = Account(name: "VK", url: urlBase + "vk.com")
         let medium = Account(name: "Medium", url: urlBase + "medium.com")
@@ -67,15 +68,13 @@ struct Account {
         let tagged = Account(name: "Tagged", url: urlBase + "tagged.com")
         let myspace = Account(name: "MySpace", url: urlBase + "myspace.com")
         let Xing = Account(name: "Xing", url: urlBase + "xing.com")
-        let myMFB = Account(name: "MyMFB", url: urlBase + "mymfb.com/mobile/")
-        let renren = Account(name: "Renren", url: urlBase + "renren.com")
         
         
         
         
         
         
-        return [facebook, twitter, google, instagram, youtube, pinterest, linkedin, tumblr, reddit, vine, flickr, soundCloud, disqus, vk, medium, meetup, twoo, tagged, myspace, Xing, myMFB, renren]
+        return [facebook, twitter, google, instagram, youtube, pinterest, linkedin, tumblr, reddit, vine, flickr, soundCloud, github, disqus, vk, medium, meetup, twoo, tagged, myspace, Xing]
         
     }
 }

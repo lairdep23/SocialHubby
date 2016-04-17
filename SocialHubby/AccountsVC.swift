@@ -12,6 +12,7 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     var accounts = Account.createAccounts()
     var selectedAccount = Account()
     
@@ -24,7 +25,13 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         self.splitViewController?.preferredDisplayMode = .AllVisible
         self.splitViewController?.delegate = self
         
+        if NSUserDefaults.standardUserDefaults().objectForKey("accounts") != nil {
+            
+            accounts = NSUserDefaults.standardUserDefaults().objectForKey("accounts") as! [Account]
+        }
+        
     }
+    
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         return true
@@ -51,12 +58,23 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         self.performSegueWithIdentifier("moveToSiteSegue", sender: nil)
     }
+
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
+        tableView.reloadData()
+        
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let websiteVC = segue.destinationViewController as! AccountsDetailVC
         
         websiteVC.account = self.selectedAccount
     }
+    
+    
 
     
 
