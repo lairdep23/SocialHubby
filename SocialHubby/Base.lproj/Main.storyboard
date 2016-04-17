@@ -1,25 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvV-MO-L1n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--First PageVC-->
+        <scene sceneID="GAU-bG-GC0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4gm-O8-aD0" customClass="FirstPageVC" customModule="SocialHubby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="DcQ-zO-T5K"/>
+                        <viewControllerLayoutGuide type="bottom" id="1X2-64-Chs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="266-xW-Ou1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to social hubby go to your accounts!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WM-NJ-MVJ">
+                                <rect key="frame" x="110" y="182" width="381" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="381" id="4dN-iQ-Ppn"/>
+                                    <constraint firstAttribute="height" constant="236" id="ulj-Nw-lv1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7WM-NJ-MVJ" firstAttribute="centerY" secondItem="266-xW-Ou1" secondAttribute="centerY" id="Jkk-1t-DnO"/>
+                            <constraint firstItem="7WM-NJ-MVJ" firstAttribute="centerX" secondItem="266-xW-Ou1" secondAttribute="centerX" id="VSH-75-acI"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqv-gH-T1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="424" y="855"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n2G-9g-vzP">
+            <objects>
+                <navigationController id="tkK-JM-98U" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2V-Ln-yaM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EIl-M1-AFc" kind="relationship" relationship="rootViewController" id="DeM-0o-Ser"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4jA-Sn-0Ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="194"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="46g-Ep-zIY">
+            <objects>
+                <viewController id="EIl-M1-AFc" customClass="AccountsVC" customModule="SocialHubby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZm-GT-BjR"/>
+                        <viewControllerLayoutGuide type="bottom" id="bwT-YJ-dtI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bre-PC-bEC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-Fu-2oK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bwT-YJ-dtI" firstAttribute="top" secondItem="dsC-Fu-2oK" secondAttribute="bottom" id="BAO-zi-8fq"/>
+                            <constraint firstAttribute="trailing" secondItem="dsC-Fu-2oK" secondAttribute="trailing" id="BbT-Jw-Gx2"/>
+                            <constraint firstItem="dsC-Fu-2oK" firstAttribute="top" secondItem="gZm-GT-BjR" secondAttribute="bottom" id="HDF-de-cd7"/>
+                            <constraint firstItem="dsC-Fu-2oK" firstAttribute="leading" secondItem="bre-PC-bEC" secondAttribute="leading" id="Rc2-pt-Myq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Accounts" id="9bz-3v-t99"/>
+                    <connections>
+                        <outlet property="tableView" destination="dsC-Fu-2oK" id="x1h-RF-Jfv"/>
+                        <segue destination="Dph-Ht-e6v" kind="showDetail" identifier="moveToSiteSegue" id="D1m-oG-peQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwB-KJ-suJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="207"/>
+        </scene>
+        <!--Accounts DetailVC-->
+        <scene sceneID="wuZ-29-fGG">
+            <objects>
+                <viewController id="Dph-Ht-e6v" customClass="AccountsDetailVC" customModule="SocialHubby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hrt-aJ-ud2"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9h-vM-SSS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C1J-VT-Hkg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfC-Oy-oZj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YfC-Oy-oZj" secondAttribute="trailing" id="1HJ-QC-dbE"/>
+                            <constraint firstItem="YfC-Oy-oZj" firstAttribute="leading" secondItem="C1J-VT-Hkg" secondAttribute="leading" id="2vc-7x-1xB"/>
+                            <constraint firstItem="YfC-Oy-oZj" firstAttribute="top" secondItem="C1J-VT-Hkg" secondAttribute="top" id="Zq9-0M-aX6"/>
+                            <constraint firstItem="T9h-vM-SSS" firstAttribute="top" secondItem="YfC-Oy-oZj" secondAttribute="bottom" id="jzA-Q7-SWe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="YfC-Oy-oZj" id="vx6-ll-sbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6f-cr-Orx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="202"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="K7z-UL-ZYa">
+            <objects>
+                <splitViewController id="bvV-MO-L1n" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="tkK-JM-98U" kind="relationship" relationship="masterViewController" id="bpt-Re-r6e"/>
+                        <segue destination="4gm-O8-aD0" kind="relationship" relationship="detailViewController" id="2Nn-Xq-8hc"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fpa-St-A6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="525"/>
         </scene>
     </scenes>
 </document>

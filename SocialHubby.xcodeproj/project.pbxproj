@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2031B90F1CBFD75C000EBD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B90E1CBFD75C000EBD08 /* AppDelegate.swift */; };
-		2031B9111CBFD75C000EBD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9101CBFD75C000EBD08 /* ViewController.swift */; };
 		2031B9141CBFD75C000EBD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2031B9121CBFD75C000EBD08 /* Main.storyboard */; };
 		2031B9171CBFD75C000EBD08 /* SocialHubby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9151CBFD75C000EBD08 /* SocialHubby.xcdatamodeld */; };
 		2031B9191CBFD75C000EBD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2031B9181CBFD75C000EBD08 /* Assets.xcassets */; };
 		2031B91C1CBFD75C000EBD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2031B91A1CBFD75C000EBD08 /* LaunchScreen.storyboard */; };
+		2031B9241CBFDD73000EBD08 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9231CBFDD73000EBD08 /* FirstPageVC.swift */; };
+		2031B9261CBFDD8B000EBD08 /* AccountsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9251CBFDD8B000EBD08 /* AccountsDetailVC.swift */; };
+		2031B9281CBFDDBB000EBD08 /* AllAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9271CBFDDBB000EBD08 /* AllAccounts.swift */; };
+		2031B92A1CBFE039000EBD08 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031B9291CBFE039000EBD08 /* AccountsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2031B90B1CBFD75C000EBD08 /* SocialHubby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialHubby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2031B90E1CBFD75C000EBD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2031B9101CBFD75C000EBD08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2031B9131CBFD75C000EBD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2031B9161CBFD75C000EBD08 /* SocialHubby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialHubby.xcdatamodel; sourceTree = "<group>"; };
 		2031B9181CBFD75C000EBD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2031B91B1CBFD75C000EBD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2031B91D1CBFD75C000EBD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2031B9231CBFDD73000EBD08 /* FirstPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
+		2031B9251CBFDD8B000EBD08 /* AccountsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDetailVC.swift; sourceTree = "<group>"; };
+		2031B9271CBFDDBB000EBD08 /* AllAccounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAccounts.swift; sourceTree = "<group>"; };
+		2031B9291CBFE039000EBD08 /* AccountsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				2031B90E1CBFD75C000EBD08 /* AppDelegate.swift */,
-				2031B9101CBFD75C000EBD08 /* ViewController.swift */,
+				2031B9251CBFDD8B000EBD08 /* AccountsDetailVC.swift */,
+				2031B9291CBFE039000EBD08 /* AccountsVC.swift */,
+				2031B9231CBFDD73000EBD08 /* FirstPageVC.swift */,
 				2031B9121CBFD75C000EBD08 /* Main.storyboard */,
 				2031B9181CBFD75C000EBD08 /* Assets.xcassets */,
 				2031B91A1CBFD75C000EBD08 /* LaunchScreen.storyboard */,
 				2031B91D1CBFD75C000EBD08 /* Info.plist */,
 				2031B9151CBFD75C000EBD08 /* SocialHubby.xcdatamodeld */,
+				2031B9271CBFDDBB000EBD08 /* AllAccounts.swift */,
 			);
 			path = SocialHubby;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2031B9111CBFD75C000EBD08 /* ViewController.swift in Sources */,
+				2031B92A1CBFE039000EBD08 /* AccountsVC.swift in Sources */,
+				2031B9261CBFDD8B000EBD08 /* AccountsDetailVC.swift in Sources */,
 				2031B9171CBFD75C000EBD08 /* SocialHubby.xcdatamodeld in Sources */,
+				2031B9281CBFDDBB000EBD08 /* AllAccounts.swift in Sources */,
+				2031B9241CBFDD73000EBD08 /* FirstPageVC.swift in Sources */,
 				2031B90F1CBFD75C000EBD08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
