@@ -27,7 +27,9 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         if NSUserDefaults.standardUserDefaults().objectForKey("accounts") != nil {
             
-            accounts = NSUserDefaults.standardUserDefaults().objectForKey("accounts") as! [Account]
+        accounts = NSUserDefaults.standardUserDefaults().objectForKey("accounts") as! [Account]
+            
+        
         }
         
     }
@@ -46,7 +48,10 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         let cell = UITableViewCell()
         
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = account.name
+        cell.imageView?.image = account.image
+        cell.backgroundColor = account.bc
         
         return cell
     }
