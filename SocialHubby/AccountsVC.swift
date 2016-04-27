@@ -22,6 +22,10 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.delegate = self
         tableView.dataSource = self
         
+        let logo = UIImage(named: "logo5evensmaller2")
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
+        
         self.splitViewController?.preferredDisplayMode = .AllVisible
         self.splitViewController?.delegate = self
         
@@ -52,6 +56,7 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         cell.textLabel?.text = account.name
         cell.imageView?.image = account.image
         cell.backgroundColor = account.bc
+        cell.textLabel?.textAlignment = .Center
         
         return cell
     }

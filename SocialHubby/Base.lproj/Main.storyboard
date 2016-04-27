@@ -98,7 +98,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Accounts" id="9bz-3v-t99"/>
+                    <navigationItem key="navigationItem" title="Accounts" id="9bz-3v-t99">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="8Np-Eb-bR6"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dsC-Fu-2oK" id="x1h-RF-Jfv"/>
                         <segue destination="Dph-Ht-e6v" kind="showDetail" identifier="moveToSiteSegue" id="D1m-oG-peQ"/>

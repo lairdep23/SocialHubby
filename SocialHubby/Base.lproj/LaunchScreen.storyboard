@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo5smaller" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-tZ-mCY">
+                                <rect key="frame" x="20" y="221" width="560" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="Hw5-z9-FtJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bs1-tZ-mCY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="2M0-5K-XsH"/>
+                            <constraint firstItem="bs1-tZ-mCY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kr9-90-Jzi"/>
+                            <constraint firstItem="bs1-tZ-mCY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qKv-z0-95q"/>
+                            <constraint firstItem="bs1-tZ-mCY" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="wVQ-aN-lxG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +39,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo5smaller" width="997" height="217"/>
+    </resources>
 </document>
