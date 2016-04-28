@@ -57,6 +57,7 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         cell.imageView?.image = account.image
         cell.backgroundColor = account.bc
         cell.textLabel?.textAlignment = .Center
+        //cell.textLabel?.font = UIFont(name: "Helvetic Neue", size: 17)
         
         return cell
     }
